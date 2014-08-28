@@ -25,9 +25,10 @@
 var stylus = require('stylus');
 var cleanCss = require('clean-css');
 var through = require('through');
+var nib = require('nib');
 
 function compile(file, data) {
-  var compiled = stylus(data, { filename: file }).render();
+  var compiled = stylus(data, { filename: file }).use(nib).render();
   var minified = (new cleanCss).minify(compiled);
 
   return 'module.exports = ' + JSON.stringify(minified) + ';';
