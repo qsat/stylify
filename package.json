@@ -6,7 +6,7 @@
   "dependencies": {
     "clean-css": "^2",
     "stylus": "^0.47.3",
-    "nib": "^2",
+    "nib": "^1",
     "through": "^2"
   },
   "devDependencies": {
